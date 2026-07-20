@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dr. Kiran Bijapur, MRSC — Research Portfolio
 
 A fast, accessible, SEO-optimised static portfolio website for Dr. Kiran Bijapur, MRSC —
@@ -217,3 +218,7 @@ scripts/        One-off Python scripts that generated the placeholder
 
 This codebase is provided for Dr. Kiran Bijapur's personal use. Replace all placeholder
 content with verified information before publishing publicly.
+=======
+# kiran-bijapur-portfolio
+kiran-bijapur-portfolio
+>>>>>>> 1e27314a14ebb3c07b693d594d2df72946c9768b

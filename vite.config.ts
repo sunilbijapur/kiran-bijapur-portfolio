@@ -16,7 +16,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // README.md "Deployment" for the full walkthrough.
 export default defineConfig({
   plugins: [react()],
-  base: '/your-repo-name/',
+  base: '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
