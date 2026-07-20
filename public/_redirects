@@ -1,0 +1,4 @@
+# Netlify SPA fallback: serve index.html for any unmatched path so
+# React Router can handle client-side routing (e.g. direct links to
+# /publications, /research, etc.)
+/*   /index.html   200
