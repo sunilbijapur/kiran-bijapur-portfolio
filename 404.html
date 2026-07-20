@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Standard "SPA on GitHub Pages" fallback technique.
+      // GitHub Pages has no server-side rewrite support, so unknown paths
+      // (e.g. /publications on a hard refresh) are served this 404.html.
+      // It re-encodes the requested path into a query string and redirects
+      // to the site root; index.html then decodes it and restores the real
+      // path via history.replaceState before React Router mounts, so the
+      // correct route renders with no visible flash or redirect loop.
+      //
+      // pathSegmentsToKeep:
+      //   0 — GitHub Pages user/org site, or any site on a custom domain
+      //       (deployed at the domain root). This is the default.
+      //   1 — GitHub Pages PROJECT site with no custom domain, i.e. served
+      //       at https://<user>.github.io/<repo-name>/. If you use this,
+      //       also set `base: '/<repo-name>/'` in vite.config.ts.
+      var pathSegmentsToKeep = 1;
+
+      var loc = window.location;
+      var segments = loc.pathname.slice(1).split('/');
+      var kept = segments.slice(0, pathSegmentsToKeep).join('/');
+      var rest = segments.slice(pathSegmentsToKeep).join('/');
+
+      var redirectUrl =
+        loc.protocol + '//' + loc.hostname + (loc.port ? ':' + loc.port : '') +
+        '/' + kept + (kept ? '/' : '') +
+        '?/' + rest.replace(/&/g, '~and~') +
+        (loc.search ? '&' + loc.search.slice(1).replace(/&/g, '~and~') : '') +
+        loc.hash;
+
+      loc.replace(redirectUrl);
+    </script>
+  </head>
+  <body></body>
+</html>
